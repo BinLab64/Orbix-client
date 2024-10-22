@@ -1,0 +1,30 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Output of the Go coverage tool
+*.out
+
+# Go workspace folders
+bin/
+pkg/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Dependency directories (when using Go vendor)
+vendor/
+
+# IDE/editor specific files
+.vscode/
+.idea/
+
+# GitHub Actions workflow files
+.github/
