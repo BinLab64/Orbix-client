@@ -117,16 +117,18 @@ type ListBalanceAddressService struct {
 	c *Client
 }
 
+type CoinSymbol string
+
 // Main struct for the user data
 type User struct {
-	ID                        int               `json:"id"`
-	Email                     string            `json:"email"`
-	IdentityVerificationLevel string            `json:"identity_verification_level"`
-	TFAEnabled                []string          `json:"tfa_enabled"`
-	APIKeys                   []APIKey          `json:"api_keys"`
-	AntiPhishingCode          string            `json:"anti_phishing_code"`
-	IsAuthorizedDevice        bool              `json:"is_authorized_device"`
-	Wallets                   map[string]Wallet `json:"wallets"`
+	ID                        int                   `json:"id"`
+	Email                     string                `json:"email"`
+	IdentityVerificationLevel string                `json:"identity_verification_level"`
+	TFAEnabled                []string              `json:"tfa_enabled"`
+	APIKeys                   []APIKey              `json:"api_keys"`
+	AntiPhishingCode          string                `json:"anti_phishing_code"`
+	IsAuthorizedDevice        bool                  `json:"is_authorized_device"`
+	Wallets                   map[CoinSymbol]Wallet `json:"wallets"`
 }
 
 // Struct for API key details

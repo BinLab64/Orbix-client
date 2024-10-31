@@ -176,7 +176,7 @@ func (c *Client) callAPI(ctx context.Context, r *request, opts ...RequestOption)
 	req, err := http.NewRequestWithContext(ctx, r.method, r.fullURL, r.body)
 	req.Header = r.header
 
-	// fmt.Printf("\n\n\n%+v\n\n\n", req)
+	fmt.Printf("\n\n<request>\n%+v\n</request>\n\n", req)
 
 	if err != nil {
 		return nil, fmt.Errorf("failed to create request: %w", err)

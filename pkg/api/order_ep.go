@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"time"
 )
 
 // GET Get order book
@@ -137,8 +138,8 @@ func (s *CreateOrderService) Do(ctx context.Context, opts ...RequestOption) (ord
 	body, err := json.Marshal(CreateOrderRequestBody{
 		Amount: s.amount,
 		// Nonce:  fmt.Sprintf("%v", time.Now().UnixMilli()),
-		// Nonce: time.Now().UnixMilli(),
-		Nonce: 2731832,
+		Nonce: time.Now().UnixMilli(),
+		// Nonce: 2731832,
 		Pair:  s.pair,
 		Price: s.price,
 		Side:  s.side,
